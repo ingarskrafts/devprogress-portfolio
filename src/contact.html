@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contacts</title>
         <link rel="stylesheet" href="../styles/style.css">
+        
     </head>
     <body>
         <header>
@@ -21,7 +22,16 @@
 
         <main>
             <h2>Welcome to Contacts page</h2>
-            <p>I'm was not sure if I even need a separate contact page so I asked chat gpt</p>
+            <form id="contactForm" novalidate>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <p id="formMessage"></p>
+
+            <article>
+            <p>I was not sure if I even need a separate contact page so I asked chat gpt</p>
             <p>Do I need a separate contact page if all contact info is already in web page footer?</p>
             <div id="contact-info">
                 <h2>Do You Need a Separate Contact Page?</h2>
@@ -70,11 +80,13 @@
                     <li><strong>Larger websites or businesses?</strong> → A dedicated <strong>Contact Page</strong> improves professionalism and usability.</li>
                 </ul>
             </div>
-            
+        </article>
         </main>
 
         <footer>
             <p>Contact me at: ingarskrafts@gmail.com</p>
         </footer>
+
+        <script src="../scripts/script.js"></script>
     </body>
 </html>
