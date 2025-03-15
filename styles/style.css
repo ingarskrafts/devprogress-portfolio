@@ -42,8 +42,8 @@ nav a {
 
 nav .active {
     font-weight: bold;
-    color: red;
-    border-bottom: 2px solid yellow;
+    color: #FFA500;
+    font-size: 18px;
 }
 
 .toggleButton {
