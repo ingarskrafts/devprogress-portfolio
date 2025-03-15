@@ -23,11 +23,14 @@
 
         <main>
             <h2>Welcome to Contacts page</h2>
+            <p>You are welcome to leave your contacts and message here</p>
             <form id="contactForm" novalidate>
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
-                <textarea id="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
+                <div class="input-group">
+                   <input type="text" id="name" placeholder="Your Name" required>
+                   <input type="email" id="email" placeholder="Your Email" required> 
+                </div>
+                <div class="message"><textarea id="message" placeholder="Your Message" required></textarea></div>
+                <button type="submit" class="submit">Send</button>
             </form>
             <p id="formMessage"></p>
 
