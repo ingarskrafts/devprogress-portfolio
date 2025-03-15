@@ -1,11 +1,17 @@
 /* Global styles */
-
+html, body {
+    height: 100%;  /* Make sure the body takes up the full viewport height */
+    margin: 0;     /* Remove default margin */
+    
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
     color: #333;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header */
@@ -33,8 +39,21 @@ nav a {
     text-decoration: none;
 }
 
+nav .active {
+    font-weight: bold;
+    color: red;
+    border-bottom: 2px solid yellow;
+}
+
+.toggleButton {
+    margin: 0px;
+    float: left;
+    top: 0;
+}
+
 /* Main content */
 main {
+    flex: 1;
     padding: 20px;
     text-align: center;
 }
@@ -45,19 +64,20 @@ main {
 
 /* Footer */
 footer {
+    margin: 0px;
     text-align: center;
     padding: 5px;
     background-color: #333;
     color: white;
-    /*position: fixed;
-    bottom: 0;*/
+    position: relative;
+    bottom: 0;
     width: 100%;
     box-sizing: border-box;
 }
 
 article {
     margin-top: 100px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     padding: 30px;
     text-align: left;
     background-color: rgba(240, 210, 170, 0.6);
