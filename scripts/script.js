@@ -55,6 +55,16 @@ projects.forEach(project => {
         <p>${project.description}</p>
         <a href="${project.link}" target="_blank">View Project</a>
         `;
+
+        /* projectCard.style.transition = "transform 1s ease";
+        projectCard.onmouseover = () => {
+            projectCard.style.transform = "scale(1.05)";
+        };
+
+        projectCard.onmouseleave = () => {
+            projectCard.style.transform = "scale(1)";
+        } */
+       
         container.appendChild(projectCard);
 });
 }
