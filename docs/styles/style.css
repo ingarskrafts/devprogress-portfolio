@@ -1,0 +1,237 @@
+/* Global styles */
+
+html, body {
+    height: 100%;  /* Make sure the body takes up the full viewport height */
+    margin: 0;     /* Remove default margin */
+    
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    text-align: center;
+    /*width: 100%;
+    box-sizing: border-box;*/
+    background-color: #333;
+    color:white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav .active {
+    font-weight: bold;
+    color: #FFA500;
+    font-size: 18px;
+}
+
+.toggleButton {
+    margin: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: 5px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.toggleButton:hover {
+    color: darkcyan;
+    font-weight: bold;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+/*-----------------------------------Main content with Grid-----------------------------------*/
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* --- PROJECTS Page with Grid START --- */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    background: white;
+    padding: 15px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    
+}
+
+#projectsContainer {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+ @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card:hover {
+    transform: scale(1.05); 
+    transition: transform ease 0.3s;
+    /* outline: 2px solid red;   /* Debug: Check if the hover is being triggered */
+}
+
+.dark-mode .project-card {
+    background-color: #333;
+    color: white;
+}
+
+/* ===PROJECT page items END=== */
+
+/* ---CONTACT page items START--- */
+#contactForm {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; /* Set width of the form */
+    max-width: 600px; /* Max width for form */
+}
+
+/* Group for name and email inputs side by side */
+.input-group {
+    display: flex;
+    gap: 10px; /* Space between the fields */
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+/* Style for input and textarea fields */
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Default to full width */
+    font-size: 16px;
+}
+
+#name, #email {
+    flex: 1;
+}
+
+/* Style for the message textarea to make it as wide as the combined input fields */
+.message {
+    display: flex;
+}
+#message {
+    flex: 1;
+    /*width: 100%;*/
+    margin-top: 10px; /* Space between fields */
+    height: 150px; /* Set a height for the message box */
+}
+
+/* Button styles */
+button.submit {
+    align-self: flex-end; /* Align the button to the right */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button.submit:hover {
+    background-color: #0056b3;
+}
+
+article {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 30px;
+    text-align: left;
+    background-color: rgba(240, 210, 170, 0.6);
+    border-radius: 50px;
+    width: 55%;
+}
+/* ===CONTACT page items END=== */
+
+/* Footer */
+footer {
+    margin: 0px;
+    text-align: center;
+    padding: 5px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+}
+
+
+
